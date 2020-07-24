@@ -18,17 +18,9 @@ cd auxiliary
 
 # now copy the ssh copy (figure this out)
 
-echo "What is your GitHub username?"
-read githubUsername
-echo "Captured GitHub username: ${githubUsername}"
-
-echo "What is the private repository's name (where your serviceAccountKey.json and config.json file are stored)?"
-read repoName
-echo "Captured repository's name: ${repoName}"
-
 cd ../../../ && sudo chmod 777 auxiliary
 
-cd auxiliary && git clone https://www.github.com/${githubUsername}/${repoName} settings
+cd auxiliary && git clone https://github.com/RandomMutiny/Auxiliary3.0.git settings
 
 sudo npm i -g pm2
 npm install
